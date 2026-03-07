@@ -6,15 +6,9 @@ let package = Package(
     products: [
         .library(name: "Nostrdb", targets: ["Nostrdb"]),
     ],
-    dependencies: [
-        .package(url: "https://github.com/jedisct1/swift-sodium.git", from: "0.10.0"),
-    ],
     targets: [
         .target(
             name: "Nostrdb",
-            dependencies: [
-                .product(name: "Clibsodium", package: "swift-sodium"),
-            ],
             path: ".",
             exclude: [
                 "test.c",
